@@ -3,17 +3,26 @@ const form = document.querySelector('form')
 
 function differ(){
     const submit = document.querySelector('#dontChange')
-    submit.textContent = "Still a spellbook"
+    submit.textContent = "Spitzer's Spellbook of Sweet Savvy Spells"
 }
 
 const submission = function(ev){
     ev.preventDefault()
-    const heading = document.querySelector('#Change')
-    const title = document.querySelector('input[name="Spell"]').value
-    const paragraph = document.querySelector('#Body')
-    const description = document.querySelector('input[name="Descript"]').value
-    heading.textContent = title
-    paragraph.textContent = description
+    const x = ev.target
+
+    const heading = document.createElement('h2')
+    const title = document.createTextNode(x.Spell.value)
+    heading.appendChild(title)
+
+    const paragraph = document.createElement('p')
+    const description = document.createTextNode(x.Descript.value)
+    paragraph.appendChild(description)
+
+    const listSet = document.querySelector('#Div')
+    listSet.appendChild(heading)
+    listSet.appendChild(paragraph)
+
+    x.reset()
 }
 
 function keypress(event){
