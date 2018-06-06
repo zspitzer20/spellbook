@@ -1,5 +1,17 @@
+@import url('https://fonts.googleapis.com/css?family=Song+Myung');
+@import url('https://fonts.googleapis.com/css?family=Indie+Flower');
 body{
     text-align: center;
     background-color: rgb(83, 194, 245);
+}
+
+h1{
+    font-family: 'Song Myung', serif;
+    color: rgb(253, 199, 147)
+}
+
+p{
+    font-family: 'Indie Flower', cursive;
     color: white
 }
+

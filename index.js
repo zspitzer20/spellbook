@@ -1,20 +1,24 @@
 const button1 = document.querySelector('button')
-const button2 = document.querySelector('input[value="Change second header"]')
+const form = document.querySelector('form')
 
 function differ(){
     const submit = document.querySelector('#dontChange')
-    submit.textContent = "This is different"
+    submit.textContent = "Still a spellbook"
 }
 
-function submission(){
+const submission = function(ev){
+    ev.preventDefault()
     const heading = document.querySelector('#Change')
-    const text = document.querySelector('input[name="Input:"]').value
-    heading.textContent = text
+    const title = document.querySelector('input[name="Spell"]').value
+    const paragraph = document.querySelector('#Body')
+    const description = document.querySelector('input[name="Descript"]').value
+    heading.textContent = title
+    paragraph.textContent = description
 }
 
 function keypress(event){
     if(event.keyCode == 13) submission
 }
 button1.addEventListener('click', differ)
-button2.addEventListener('click', submission)
-button2.addEventListener('keydown', keypress(event))
+form.addEventListener('submit', submission)
+form.addEventListener('keydown', keypress(event))
