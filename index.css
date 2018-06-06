@@ -2,7 +2,6 @@
 @import url('https://fonts.googleapis.com/css?family=Indie+Flower');
 body{
     text-align: center;
-    /*background-color: rgb(83, 194, 245);*/
     background: url(wood.jpg);
     background-size: cover;
     background-attachment: fixed;
@@ -45,7 +44,7 @@ h1{
 
 h2{
     font-family: 'Song Myung', serif;
-    color: brown/* rgb(253, 199, 147) */
+    color: brown
 }
 
 p{
@@ -55,7 +54,7 @@ p{
 
 img#skull {
     position: absolute;
-    right: 1vw;
+    right: -2vw;
     top: 1vw;
     transform: rotate(15deg);
     width: 25vw;
