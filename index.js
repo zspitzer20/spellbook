@@ -9,7 +9,10 @@ function differ(){
 const submission = function(ev){
     ev.preventDefault()
     const x = ev.target
-
+    if(x.Spell.value == ""){
+        window.alert("Error: Spell Name needed")
+    }
+    else{
     const heading = document.createElement('h2')
     const title = document.createTextNode(x.Spell.value)
     heading.appendChild(title)
@@ -21,9 +24,21 @@ const submission = function(ev){
     const listSet = document.querySelector('#Div')
     listSet.appendChild(heading)
     listSet.appendChild(paragraph)
-
+    }
     x.reset()
 }
+
+/*function headAppend(x){
+    const heading = document.createElement('h2')
+    const title = document.createTextNode(x.Spell.value)
+    heading.appendChild(title)
+}*/
+
+/*function descriptAppend(x){
+    const paragraph = document.createElement('p')
+    const description = document.createTextNode(x.Descript.value)
+    paragraph.appendChild(description)
+}*/
 
 function keypress(event){
     if(event.keyCode == 13) submission
