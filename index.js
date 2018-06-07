@@ -1,5 +1,7 @@
 const button1 = document.querySelector('button')
 const form = document.querySelector('form')
+var spellName = []
+var spellDescript = []
 
 function differ(){
     const submit = document.querySelector('#dontChange')
@@ -14,6 +16,7 @@ const submission = function(ev){
     }
     else{
         const heading = headAppend(x)
+        const deletion = deleteAppend(heading)
         const paragraph = descriptAppend(x)
         const listSet = listAppend(x, heading, paragraph)
     x.reset()
@@ -23,14 +26,26 @@ const submission = function(ev){
 function headAppend(x){
     const heading = document.createElement('h2')
     const title = document.createTextNode(x.Spell.value)
+    spellName.push(x.Spell.value)
     heading.appendChild(title)
     return heading
 }
 
+function deleteAppend(heading){
+    const erase = document.createElement('button')
+    erase.setAttribute("type", "submit")
+    erase.setAttribute("class", "erase")
+    erase.setAttribute("id", spellName.length - 1)
+    const phrase = document.createTextNode('Delete')
+    erase.appendChild(phrase)
+    heading.appendChild(erase)
+    return heading
+}
 function descriptAppend(x){
     const paragraph = document.createElement('p')
     const description = document.createTextNode(x.Descript.value)
     paragraph.appendChild(description)
+    spellDescript.push(x.Descript.value)
     return paragraph
 }
 

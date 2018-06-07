@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Song+Myung');
 @import url('https://fonts.googleapis.com/css?family=Indie+Flower');
 body{
-    text-align: center;
     background: url(wood.jpg);
     background-size: cover;
     background-attachment: fixed;
@@ -10,6 +9,9 @@ body{
     margin: 0;
 }
 
+.Info{
+    text-align: center;
+}
 .titleChange {
     background-color: rgb(83, 194, 245);
     border: none;
@@ -39,7 +41,8 @@ body{
 h1{
     font-family: 'Song Myung', serif;
     font-size: 48px;
-    color: rgb(253, 199, 147)
+    color: rgb(253, 199, 147);
+    text-align: center;
 }
 
 h2{
@@ -85,4 +88,8 @@ img#skull {
     overflow-y: scroll;
     padding: 1.5rem 4rem;
     box-shadow: 1px 1px 15px  rgba(0,0,0,0.4);
+  }
+
+  .erase{
+      float: right
   }
